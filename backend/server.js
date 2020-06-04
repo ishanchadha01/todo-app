@@ -22,8 +22,6 @@ connection.once('open', () => {
 });
 
 const usersRouter = require('./routes/users');
-const bankAuthRouter = require('./routes/bank-authentication');
-const loanAppRouter = require('./routes/loan-application');
 
 app.use('/users', usersRouter);
 
