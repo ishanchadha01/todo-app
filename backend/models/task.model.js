@@ -5,28 +5,12 @@ const taskSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    category: {
-        type: String,
+    user: {
+        type: mongoose.Types.ObjectId,
         required: true,
-    },
-    description: {
-        type: String,
-        required: true,
-    },
-    date: {
-        type: String,
-        required: true,
-    },
-    length: {
-        type: Number,
-        required = true,
     },
     status: {
         type: String,
-        required: true,
-    },
-    user: {
-        type: Number,
         required: true,
     }
 });
