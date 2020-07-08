@@ -7,7 +7,7 @@ const taskSchema = new mongoose.Schema({
     },
     user: {
         type: mongoose.Types.ObjectId,
-        required: true,
+        required: false,
     },
     status: {
         type: String,

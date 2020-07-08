@@ -16,4 +16,22 @@ router.route('/add').post((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/update').patch((req, res) => {
+    const uid = req.body.uid;
+    const username = req.body.username;
+    const newUser = new User({uid, username});
+    newUser.findOneAndUpdate()
+        .then(() => res.json('User updated'))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/delete').delete((req, res) => {
+    const uid = req.body.uid;
+    const username = req.body.username;
+    const newUser = new User({uid, username});
+    newUser.findByIdAndDelete()
+        .then(() => res.json('Task updated'))
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
 module.exports = router;

@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class TaskviewComponent implements OnInit {
 
   name:string = "Ishan";
-  title:string = "Todo App"
+  title:string = "Todo App";
+  tasks:Task[] = [];
   
   constructor() { }
 
